@@ -1,0 +1,11 @@
+{% load static %}
+
+<div class="card shadow mb-5">
+    <img  src="{% static 'img/'|add:f.resim %}" class="card-img-top" style="height: 367px;" alt="{{f.aciklama}}">
+    <div class="card-body">
+        <h5 class="card-title">{{ f.film_adi }}</h5>
+        <p class="card-text">{{ f.yonetmen }}</p>
+        <p class="card-text">{{ f.aciklama  }}</p>
+        <a href="{% url 'watchnow' f.id %}" class="btn btn-success">İzle</a>
+    </div>
+</div>
